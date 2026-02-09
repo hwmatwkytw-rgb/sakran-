@@ -50,7 +50,7 @@ async function onCall({ message, args, getLang, data }) {
 
         const availableLangs = getAvailableLangs();
 
-        if (input == 'list' || input == 'all')
+        if (input == 'list' || input == 'all')✅
             return message.reply(getLang("allLangs", { availableLangs: availableLangs.join("\n") }))
 
         if (input == 'reset') {
