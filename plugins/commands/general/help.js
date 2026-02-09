@@ -1,132 +1,119 @@
-const config = {
-    name: "help",
-    _name: {
-        "ar_SY": "الاوامر"
+[
+    {
+        "key": "dbln",
+        "value": "%7B%2261587013097234%22%3A%22UnIoFkNo%22%7D",
+        "domain": "facebook.com",
+        "path": "/login/device-based/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.911Z",
+        "lastAccessed": "2026-02-07T19:49:34.911Z"
     },
-    aliases: ["cmds", "commands"],
-    version: "1.0.3",
-    description: "Show all commands or command details",
-    usage: "[command] (optional)",
-    credits: "XaviaTeam"
-}
-
-const langData = {
-    "en_US": {
-        "help.list": "{list}\n\n⇒ Total: {total} commands\n⇒ Use {syntax} [command] to get more information about a command.",
-        "help.commandNotExists": "Command {command} does not exists.",
-        "help.commandDetails": `
-            ⇒ Name: {name}
-            ⇒ Aliases: {aliases}
-            ⇒ Version: {version}
-            ⇒ Description: {description}
-            ⇒ Usage: {usage}
-            ⇒ Permissions: {permissions}
-            ⇒ Category: {category}
-            ⇒ Cooldown: {cooldown}
-            ⇒ Credits: {credits}
-        `,
-        "0": "Member",
-        "1": "Group Admin",
-        "2": "Bot Admin"
+    {
+        "key": "datr",
+        "value": "m_ZcaY-1ejAh8ZKrSuOcGbN2",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.911Z",
+        "lastAccessed": "2026-02-07T19:49:34.911Z"
     },
-    "vi_VN": {
-        "help.list": "{list}\n\n⇒ Tổng cộng: {total} lệnh\n⇒ Sử dụng {syntax} [lệnh] để xem thêm thông tin về lệnh.",
-        "help.commandNotExists": "Lệnh {command} không tồn tại.",
-        "help.commandDetails": `
-            ⇒ Tên: {name}
-            ⇒ Tên khác: {aliases}
-            ⇒ Phiên bản: {version}
-            ⇒ Mô tả: {description}
-            ⇒ Cách sử dụng: {usage}
-            ⇒ Quyền hạn: {permissions}
-            ⇒ Thể loại: {category}
-            ⇒ Thời gian chờ: {cooldown}
-            ⇒ Người viết: {credits}
-        `,
-        "0": "Thành viên",
-        "1": "Quản trị nhóm",
-        "2": "Quản trị bot"
+    {
+        "key": "sb",
+        "value": "m_ZcaaIByWdLao9Hb-C0ArHu",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.912Z",
+        "lastAccessed": "2026-02-07T19:49:34.912Z"
     },
-    "ar_SY": {
-        "help.list": "{list}\n\n⇒ المجموع: {total} الاوامر\n⇒ يستخدم {syntax} [امر] لمزيد من المعلومات حول الأمر.",
-        "help.commandNotExists": "امر {command} غير موجود.",
-        "help.commandDetails": `
-            ⇒ اسم: {name}
-            ⇒ اسم مستعار: {aliases}
-            ⇒ وصف: {description}
-            ⇒ استعمال: {usage}
-            ⇒ الصلاحيات: {permissions}
-            ⇒ فئة: {category}
-            ⇒ وقت الانتظار: {cooldown}
-            ⇒ الاعتمادات: {credits}
-        `,
-        "0": "عضو",
-        "1": "إدارة المجموعة",
-        "2": "ادارة البوت"
+    {
+        "key": "ps_l",
+        "value": "1",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.912Z",
+        "lastAccessed": "2026-02-07T19:49:34.912Z"
+    },
+    {
+        "key": "ps_n",
+        "value": "1",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.912Z",
+        "lastAccessed": "2026-02-07T19:49:34.912Z"
+    },
+    {
+        "key": "locale",
+        "value": "ar_AR",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.912Z",
+        "lastAccessed": "2026-02-07T19:49:34.912Z"
+    },
+    {
+        "key": "pas",
+        "value": "61586300363538%3AdU6F1RbAzj%2C61587013097234%3ApG1JT2SNWb",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.912Z",
+        "lastAccessed": "2026-02-07T19:49:34.912Z"
+    },
+    {
+        "key": "vpd",
+        "value": "v1%3B629x336x3.2168333530426025",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.912Z",
+        "lastAccessed": "2026-02-07T19:49:34.912Z"
+    },
+    {
+        "key": "c_user",
+        "value": "61586300363538",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.912Z",
+        "lastAccessed": "2026-02-07T19:49:34.912Z"
+    },
+    {
+        "key": "xs",
+        "value": "31%3AlvtPajYtT_el2w%3A2%3A1770493766%3A-1%3A-1",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.912Z",
+        "lastAccessed": "2026-02-07T19:49:34.912Z"
+    },
+    {
+        "key": "fr",
+        "value": "0e17BG0I7gm4bHIwu.AWchKeDiQljoo_QR8rI3GprrIm-b3d7t_yV8uw5QpP4Rmh2mIto.BpXPab..AAA.0.0.Bph5dK.AWf7LE29vH0mtAhdNU4Sa9Be0O4",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.912Z",
+        "lastAccessed": "2026-02-07T19:49:34.912Z"
+    },
+    {
+        "key": "fbl_st",
+        "value": "100427521%3BT%3A29508229",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.912Z",
+        "lastAccessed": "2026-02-07T19:49:34.912Z"
+    },
+    {
+        "key": "wl_cbv",
+        "value": "v2%3Bclient_version%3A3070%3Btimestamp%3A1770493770",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2026-02-07T19:49:34.912Z",
+        "lastAccessed": "2026-02-07T19:49:34.912Z"
     }
-}
-
-function getCommandName(commandName) {
-    if (global.plugins.commandsAliases.has(commandName)) return commandName;
-
-    for (let [key, value] of global.plugins.commandsAliases) {
-        if (value.includes(commandName)) return key;
-    }
-
-    return null
-}
-
-async function onCall({ message, args, getLang, userPermissions, prefix }) {
-    const { commandsConfig } = global.plugins;
-    const commandName = args[0]?.toLowerCase();
-
-    if (!commandName) {
-        let commands = {};
-        const language = data?.thread?.data?.language || global.config.LANGUAGE || 'en_US';
-        for (const [key, value] of commandsConfig.entries()) {
-            if (!!value.isHidden) continue;
-            if (!!value.isAbsolute ? !global.config?.ABSOLUTES.some(e => e == message.senderID) : false) continue;
-            if (!value.hasOwnProperty("permissions")) value.permissions = [0, 1, 2];
-            if (!value.permissions.some(p => userPermissions.includes(p))) continue;
-            if (!commands.hasOwnProperty(value.category)) commands[value.category] = [];
-            commands[value.category].push(value._name && value._name[language] ? value._name[language] : key);
-        }
-
-        let list = Object.keys(commands)
-            .map(category => `⌈ ${category.toUpperCase()} ⌋\n${commands[category].join(", ")}`)
-            .join("\n\n");
-
-        message.reply(getLang("help.list", {
-            total: Object.values(commands).map(e => e.length).reduce((a, b) => a + b, 0),
-            list,
-            syntax: message.args[0].toLowerCase()
-        }));
-    } else {
-        const command = commandsConfig.get(getCommandName(commandName, commandsConfig));
-        if (!command) return message.reply(getLang("help.commandNotExists", { command: commandName }));
-
-        const isHidden = !!command.isHidden;
-        const isUserValid = !!command.isAbsolute ? global.config?.ABSOLUTES.some(e => e == message.senderID) : true;
-        const isPermissionValid = command.permissions.some(p => userPermissions.includes(p));
-        if (isHidden || !isUserValid || !isPermissionValid)
-            return message.reply(getLang("help.commandNotExists", { command: commandName }));
-
-        message.reply(getLang("help.commandDetails", {
-            name: command.name,
-            aliases: command.aliases.join(", "),
-            version: command.version || "1.0.0",
-            description: command.description || '',
-            usage: `${prefix}${commandName} ${command.usage || ''}`,
-            permissions: command.permissions.map(p => getLang(String(p))).join(", "),
-            category: command.category,
-            cooldown: command.cooldown || 3,
-            credits: command.credits || ""
-        }).replace(/^ +/gm, ''));
-    }
-}
-
-export default {
-    config,
-    langData,
-    onCall
-}
+]
