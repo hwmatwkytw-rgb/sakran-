@@ -1,8 +1,8 @@
 const config = {
-    name: "language",
+    name: "اللغة",
     aliases: ["lang"],
-    description: "choose bot language for group",
-    usage: "[lang/reset/list]",
+    description: "تغيير لغة البوت للمجموعة",
+    usage: "[لغة/إعادة/قائمة]",
     cooldown: 3,
     permissions: [1, 2],
     credits: "XaviaTeam"
@@ -26,12 +26,12 @@ const langData = {
         "error": "Có lỗi xảy ra, vui lòng thử lại sau."
     },
     "ar_SY": {
-        "missingInput": "بيانات مفقودة!",
+        "missingInput": "الرجاء إدخال بيانات صحيحة!",
         "allLangs": "اللغات المتوفرة:\n{availableLangs}",
-        "resetSucceed": "إعادة تعيين اللغة إلى {language}",
+        "resetSucceed": "تمت إعادة تعيين اللغة إلى {language}",
         "changeSucceed": "تم تغيير اللغة إلى {language}",
-        "invalidInput": "إدخال غير صحيح ، يرجى المحاولة مرة أخرى.\n• المدخلات المتاحة:\n{input}\n• اللغات المتوفرة:\n{availableLangs}",
-        "error": "لقد حدث خطأ، رجاء أعد المحاولة لاحقا."
+        "invalidInput": "إدخال غير صحيح، حاول مرة أخرى.\n• الأوامر المتاحة:\n{input}\n• اللغات المتوفرة:\n{availableLangs}",
+        "error": "حدث خطأ، يرجى المحاولة لاحقًا."
     }
 }
 
@@ -77,4 +77,4 @@ export default {
     config,
     langData,
     onCall
-}
+        }
