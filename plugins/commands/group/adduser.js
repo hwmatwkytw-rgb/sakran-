@@ -1,8 +1,8 @@
 const config = {
-    name: "adduser",
-    aliases: ["add"],
-    description: "Add user to group",
-    usage: "[uid/profileUrl]",
+    name: "إضافة",
+    aliases: ["إضافة", "add"],
+    description: "إضافة مستخدم إلى المجموعة",
+    usage: "[uid/رابط الملف الشخصي]",
     cooldown: 3,
     permissions: [1],
     credits: "XaviaTeam",
@@ -33,14 +33,14 @@ const langData = {
     },
     ar_SY: {
         missingInput:
-            "لم تقم بإدخال المعرف أو رابط الملف الشخصي الخاص بالشخص المراد إضافته إلى المجموعة..",
+            "لم تقم بإدخال المعرف أو رابط الملف الشخصي للشخص المراد إضافته إلى المجموعة.",
         botNotAdmin:
-            "يحتاج البوت إلى ان يكون ادمن في المجموعة لتنفيذ هذا الأمر.",
+            "يجب منح البوت صلاحيات الإدارة في المجموعة لتنفيذ هذا الأمر.",
         invalidInput: "المعرف أو رابط الملف الشخصي غير صالح.",
-        botAdd: "لا يستطيع البوت إضافة نفسه إلى المجموعة.",
+        botAdd: "لا يمكن للبوت إضافة نفسه إلى المجموعة.",
         selfAdd: "لا يمكنك استخدام هذا الأمر لإضافة نفسك إلى المجموعة.",
-        success: "اضيف بنجاح.",
-        error: "حصل خطأ. الرجاء المحاوله مرة اخرى.",
+        success: "تمت الإضافة بنجاح.",
+        error: "حدث خطأ، يرجى المحاولة لاحقًا.",
     },
 };
 
@@ -70,9 +70,11 @@ async function onCall({ message, args, getLang, data }) {
         let uid = !isNaN(input)
             ? input
             : input.match(
-                  /(?:(?:http|https):\/\/)?(?:www.|m.)?(?:facebook|fb).com\/(?!home.php)(?:(?:\w)*#!\/)?(?:pages\/)?(?:[?\w\-]*\/)?(?:profile.php\?id=(?=\d.*))?([\w\.-]+)/
+                  /(?:(?:http|https):\/\/)?(?:(?:www\.)?)(?:facebook|fb)\.com\/(?!home\.php)(?:(?:\w)*#!\/)?(?:pages\/)?(?:[?\w\-]*\/)?(?:profile\.php\?id=(?=\d.*))?([\w\.-]+)/
               )?.[1];
+
         if (!uid) return reply(getLang("invalidInput"));
+
         if (isNaN(uid)) {
             uid = (await api.getUserID(uid))[0].userID;
         }
@@ -81,8 +83,6 @@ async function onCall({ message, args, getLang, data }) {
 
         if (uid == global.botID) return reply(getLang("botAdd"));
         if (uid == senderID) return reply(getLang("selfAdd"));
-
-        // I won't check if the user is already in the group because it's not a good idea to do so ¯\_(ツ)_/¯
 
         await adduser(uid, threadID);
         return reply(getLang("success"));
