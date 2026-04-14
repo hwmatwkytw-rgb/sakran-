@@ -1,9 +1,9 @@
 const config = {
-    name: "levelup",
+    name: "رفع_المستوى",
     aliases: ["lvlup"],
     permissions: [1, 2],
-    description: "Turn on/off level up notification",
-    usage: "[on/off]",
+    description: "تفعيل أو إيقاف إشعار رفع المستوى",
+    usage: "[تشغيل/إيقاف]",
     cooldown: 5,
     credits: "XaviaTeam"
 }
@@ -25,10 +25,10 @@ const langData = {
     },
     "ar_SY": {
         "levelup.on": "تم تشغيل إشعار رفع المستوى.",
-        "levelup.off": "تم ايقاف إشعار رفع المستوى.",
-        "levelup.alreadyOn": "تم تشغيل إشعار رفع المستوى بالفعل.",
-        "levelup.alreadyOff": "تم ايقاف إشعار رفع المستوى بالفعل.",
-        "error": "لقد حدث خطأ، رجاء أعد المحاولة لاحقا."
+        "levelup.off": "تم إيقاف إشعار رفع المستوى.",
+        "levelup.alreadyOn": "إشعار رفع المستوى مفعل بالفعل.",
+        "levelup.alreadyOff": "إشعار رفع المستوى غير مفعل بالفعل.",
+        "error": "حدث خطأ، يرجى المحاولة لاحقًا."
     }
 }
 
