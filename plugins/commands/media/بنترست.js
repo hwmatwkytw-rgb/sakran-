@@ -1,9 +1,9 @@
 const config = {
-    name: "safebooru",
-    aliases: ["sb"],
-    description: "Get images from safebooru",
+    name: "بنترست",
+    aliases: ["صور", "صورة", "sb"],
+    description: "جلب صور من موقع safebooru",
     version: "0.0.1-beta",
-    usage: "[tag]",
+    usage: "[كلمة البحث]",
     cooldown: 5,
     permissions: [0, 1, 2],
     credits: "XaviaTeam",
@@ -15,7 +15,7 @@ async function onCall({ message, args }) {
 
         const tags = args.join("_");
 
-        if (!tags) return message.reply("Please enter a tag to search for.");
+        if (!tags) return message.reply("يرجى إدخال كلمة للبحث.");
 
         const data = await global
             .GET(
@@ -30,7 +30,7 @@ async function onCall({ message, args }) {
             });
 
         if (data.length === 0 || data === null)
-            throw new Error(`No results found or error for: ${tags}`);
+            throw new Error(`لم يتم العثور على نتائج أو حدث خطأ: ${tags}`);
 
         const filteredData = data.filter(
             (e) =>
@@ -40,7 +40,7 @@ async function onCall({ message, args }) {
         );
 
         if (filteredData.length === 0)
-            return message.reply("No results found.");
+            return message.reply("لم يتم العثور على نتائج.");
 
         global.shuffleArray(filteredData);
 
@@ -58,7 +58,7 @@ async function onCall({ message, args }) {
     } catch (e) {
         console.error(e);
         return message.reply(
-            "Error, please try again later or contact the developer."
+            "حدث خطأ، حاول مرة أخرى لاحقًا أو تواصل مع المطور."
         );
     }
 }
