@@ -1,8 +1,8 @@
 const config = {
-    name: "rules",
+    name: "القوانين",
     aliases: ["rule"],
-    description: "Setting rules for group",
-    usage: "[add/remove] [rule]",
+    description: "إدارة قوانين المجموعة",
+    usage: "[إضافة/حذف] [قانون]",
     cooldown: 3,
     permissions: [0, 1, 2],
     credits: "XaviaTeam"
@@ -128,4 +128,4 @@ export default {
     config,
     langData,
     onCall
-}
+        }
