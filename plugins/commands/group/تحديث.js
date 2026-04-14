@@ -1,8 +1,8 @@
 const _12HOURS = 12 * 60 * 60 * 1000;
 const config = {
-    name: "refresh",
+    name: "تحديث",
     aliases: ["rfs"],
-    description: "Refresh thread data",
+    description: "تحديث بيانات المجموعة",
     permissions: [1, 2],
     cooldown: _12HOURS
 }
@@ -38,4 +38,4 @@ export default {
     config,
     langData,
     onCall
-}
+    }
