@@ -1,7 +1,7 @@
 const config = {
-    name: "kick",
-    description: "kick user",
-    usage: "[reply/@mention]",
+    name: "طرد",
+    description: "طرد مستخدم من المجموعة",
+    usage: "[رد/منشن]",
     cooldown: 5,
     permissions: [1],
     credits: "XaviaTeam",
@@ -32,14 +32,14 @@ const langData = {
         error: "Đã có lỗi xảy ra, vui lòng thử lại sau",
     },
     ar_SY: {
-        missingTarget: "يرجى وضع علامة أو الرد على رسالة المستخدم للركلة",
-        botNotAdmin: "يجب أن يكون البوت مسؤولا لطرد المستخدم",
-        botTarget: "لماذا تريد طرد البوت من المجموعة :<?",
-        senderTarget: "لماذا تريد طرد نفسك من المجموعة :v?",
-        botAndSenderTarget: "لماذا تريد طرد البوت ونفسك من المجموعة :v?",
+        missingTarget: "يرجى الإشارة أو الرد على رسالة المستخدم المراد طرده",
+        botNotAdmin: "يجب أن يكون البوت مشرفًا لطرد المستخدم",
+        botTarget: "لماذا تريد طرد البوت من المجموعة؟",
+        senderTarget: "لماذا تريد طرد نفسك من المجموعة؟",
+        botAndSenderTarget: "لماذا تريد طرد البوت ونفسك من المجموعة؟",
         kickResult: "تم طرد {success} مستخدم",
-        kickFail: "فشل ركل {fail} مستخدم",
-        error: "لقد حدث خطأ، رجاء أعد المحاولة لاحقا",
+        kickFail: "فشل طرد {fail} مستخدم",
+        error: "حدث خطأ، يرجى المحاولة لاحقًا",
     },
 };
 
@@ -61,6 +61,7 @@ async function onCall({ message, getLang, data }) {
 
         const threadInfo = data.thread.info;
         const { adminIDs } = threadInfo;
+
         const targetIDs =
             Object.keys(mentions).length > 0
                 ? Object.keys(mentions)
@@ -68,10 +69,13 @@ async function onCall({ message, getLang, data }) {
 
         if (!adminIDs.some((e) => e == global.botID))
             return reply(getLang("botNotAdmin"));
+
         if (targetIDs.length == 1 && targetIDs[0] == global.botID)
             return reply(getLang("botTarget"));
+
         if (targetIDs.length == 1 && targetIDs[0] == senderID)
             return reply(getLang("senderTarget"));
+
         if (
             targetIDs.length == 2 &&
             targetIDs.some((e) => e == global.botID) &&
@@ -81,6 +85,7 @@ async function onCall({ message, getLang, data }) {
 
         let success = 0,
             fail = 0;
+
         for (const targetID of targetIDs) {
             if (targetID == global.botID || targetID == senderID) continue;
             try {
