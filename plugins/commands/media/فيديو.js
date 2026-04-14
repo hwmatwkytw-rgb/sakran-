@@ -5,11 +5,11 @@ import { statSync } from "fs";
 const _48MB = 48 * 1024 * 1024;
 
 const config = {
-    name: "video",
-    aliases: ['play', 'yt2mp4'],
+    name: "فيديو",
+    aliases: ['تشغيل', 'يوتيوب', 'يوتيوبmp4'],
     version: "1.0.3",
-    description: "Play a video from youtube",
-    usage: '<keyword/url>',
+    description: "تشغيل فيديو من يوتيوب",
+    usage: '<كلمة مفتاحية/رابط>',
     cooldown: 30,
     credits: "XaviaTeam",
     extra: {
@@ -35,11 +35,11 @@ const langData = {
         "video.error": "Đã xảy ra lỗi"
     },
     "ar_SY": {
-        "video.missingArguement": "يرجى تقديم كلمة رئيسية أو عنوان الرابط",
+        "video.missingArguement": "يرجى إدخال كلمة مفتاحية أو رابط",
         "video.noResult": "لم يتم العثور على نتائج",
         "video.invalidUrl": "الرابط غير صالح",
-        "video.invaldIndex": "فهرس غير صالح",
-        "video.tooLarge": "الفيديو كبير جدًا ، الحد الأقصى للحجم هو 48 ميجا بايت",
+        "video.invaldIndex": "رقم غير صالح",
+        "video.tooLarge": "الفيديو كبير جدًا، الحد الأقصى 48 ميجابايت",
         "video.error": "حدث خطأ"
     }
 }
@@ -81,7 +81,8 @@ async function chooseVideo({ message, eventData, getLang }) {
     const { videos } = eventData;
 
     const index = parseInt(message.body) - 1;
-    if (isNaN(index) || index < 0 || index >= videos.length) return message.reply(getLang("video.invaldIndex"));
+    if (isNaN(index) || index < 0 || index >= videos.length)
+        return message.reply(getLang("video.invaldIndex"));
 
     const video = videos[index];
 
@@ -210,4 +211,4 @@ export default {
     config,
     langData,
     onCall
-}
+    }
