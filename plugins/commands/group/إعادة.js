@@ -1,8 +1,8 @@
 const config = {
-    name: "resend",
+    name: "إعادة_الإرسال",
     permissions: [1, 2],
-    description: "Turn on/off resend message",
-    usage: "[on/off]",
+    description: "تفعيل أو إيقاف إعادة إرسال الرسائل",
+    usage: "[تشغيل/إيقاف]",
     cooldown: 5,
     credits: "XaviaTeam"
 }
@@ -25,9 +25,9 @@ const langData = {
     "ar_SY": {
         "resend.on": "تم تشغيل إعادة الإرسال.",
         "resend.off": "تم إيقاف إعادة الإرسال.",
-        "resend.alreadyOn": "إعادة الإرسال قيد التشغيل بالفعل.",
-        "resend.alreadyOff": "تم إيقاف إعادة الإرسال بالفعل.",
-        "error": "لقد حدث خطأ، رجاء أعد المحاولة لاحقا."
+        "resend.alreadyOn": "إعادة الإرسال مفعّلة بالفعل.",
+        "resend.alreadyOff": "إعادة الإرسال غير مفعّلة بالفعل.",
+        "error": "حدث خطأ، يرجى المحاولة لاحقًا."
     }
 }
 
@@ -70,4 +70,4 @@ export default {
     config,
     langData,
     onCall
-}
+            }
