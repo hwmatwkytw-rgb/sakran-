@@ -7,11 +7,11 @@ import { statSync } from "fs";
 const _48MB = 48 * 1024 * 1024;
 
 const config = {
-    name: "audio",
+    name: "يوتيوب ",
     aliases: ['yt2mp3', 'sing'],
     version: "1.0.3",
-    description: "Play music from youtube",
-    usage: '<keyword/url>',
+    description: "تشغيل الموسيقى من يوتيوب",
+    usage: '<كلمة مفتاحية/رابط>',
     cooldown: 30,
     credits: "XaviaTeam",
     extra: {
@@ -37,11 +37,11 @@ const langData = {
         "audio.error": "Đã xảy ra lỗi"
     },
     "ar_SY": {
-        "audio.missingArguement": "يرجى تقديم كلمة رئيسية أو عنوان الرابط",
+        "audio.missingArguement": "يرجى إدخال كلمة مفتاحية أو رابط",
         "audio.noResult": "لم يتم العثور على نتائج",
         "audio.invalidUrl": "الرابط غير صالح",
-        "audio.invaldIndex": "فهرس غير صالح",
-        "audio.tooLarge": "الصوت كبير جدًا ، الحد الأقصى للحجم هو 48 ميجا بايت",
+        "audio.invaldIndex": "رقم الاختيار غير صالح",
+        "audio.tooLarge": "حجم الصوت كبير جدًا، الحد الأقصى هو 48 ميجابايت",
         "audio.error": "حدث خطأ"
     }
 }
