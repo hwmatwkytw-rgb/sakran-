@@ -1,5 +1,5 @@
 const config = {
-    name: "wallpaper",
+    name: "خلفية",
     aliases: ["anhnen", "wp"],
     credits: "XaviaTeam"
 }
@@ -14,13 +14,13 @@ function onCall({ message }) {
                     attachment: imgStream
                 });
             } catch {
-                message.reply("Error!");
+                message.reply("حدث خطأ أثناء جلب الصورة!");
             }
         })
-        .catch(_ => message.reply("Error!"));
+        .catch(_ => message.reply("حدث خطأ في الاتصال بالخادم!"));
 }
 
 export default {
     config,
     onCall
-}
+                    }
