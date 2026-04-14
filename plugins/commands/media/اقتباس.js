@@ -1,7 +1,7 @@
 const config = {
-    name: "quote",
-    description: "Anime Quotes!",
-    usage: "[character]",
+    name: "اقتباس",
+    description: "اقتباسات أنمي!",
+    usage: "[الشخصية]",
     cooldown: 3,
     permissions: [0, 1, 2],
     credits: "XaviaTeam"
@@ -20,8 +20,8 @@ const langData = {
     },
     "ar_SY": {
         "noResults": "لم يتم العثور على نتائج",
-        "results": "• Anime: {anime}\n• الشخصية: {character}\n• Quote: \"{quote}\"",
-        "error": "Đã có lỗi xảy ra..."
+        "results": "• الأنمي: {anime}\n• الشخصية: {character}\n• الاقتباس: \"{quote}\"",
+        "error": "حدث خطأ، حاول مرة أخرى لاحقًا"
     }
 }
 
@@ -53,4 +53,4 @@ export default {
     config,
     langData,
     onCall
-}
+        }
