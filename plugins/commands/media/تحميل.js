@@ -4,11 +4,11 @@ import { join } from 'path';
 const _48MB = 48 * 1024 * 1024;
 
 const config = {
-    name: "tikvideo",
-    aliases: ["tik", "tikdown", "tikdl"],
+    name: "تحميل",
+    aliases: ["تيك", "تيكداون", "تحميل", "تيكdl"],
     version: "1.0.1",
-    description: "Download video tiktok no watermark.",
-    usage: "[url]",
+    description: "تحميل فيديوهات تيك توك بدون علامة مائية",
+    usage: "[رابط]",
     credits: "XaviaTeam",
     cooldown: 5
 }
@@ -25,8 +25,8 @@ const langData = {
         "error": "Đã xảy ra lỗi"
     },
     "ar_SY": {
-        "missingUrl": "يرجى تقديم عنوان الرابط",
-        "fileTooLarge": "الملف كبير جدًا ، الحد الأقصى للحجم هو 48 ميجا بايت",
+        "missingUrl": "يرجى إدخال رابط",
+        "fileTooLarge": "الملف كبير جدًا، الحد الأقصى 48 ميجابايت",
         "error": "حدث خطأ"
     },
 }
@@ -82,4 +82,4 @@ export default {
     config,
     langData,
     onCall
-}
+              }
