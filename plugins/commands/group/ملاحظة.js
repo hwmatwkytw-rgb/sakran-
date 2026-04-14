@@ -1,7 +1,7 @@
 const config = {
-    name: "note",
-    description: "note a message",
-    usage: "[reply]",
+    name: "ملاحظة",
+    description: "تسجيل رسالة كملاحظة",
+    usage: "[رد]",
     cooldown: 3,
     permissions: [0, 1, 2],
     credits: "XaviaTeam"
@@ -27,10 +27,10 @@ const langData = {
     "ar_SY": {
         "dataNotReady": "البيانات ليست جاهزة ، يرجى المحاولة مرة أخرى في وقت لاحق.",
         "alreadyNoted": "لديك بالفعل ملاحظة في هذه الدردشة ، هل تريد استبدالها؟\nReact 👍 للكتابة.",
-        "noted": "ملحوظة!",
-        "notNoted": "ليس لديك رسائل لتلاحظها في هذه الدردشة.",
+        "noted": "تم تسجيل الملاحظة!",
+        "notNoted": "لا توجد لديك أي ملاحظة في هذه الدردشة.",
         "note": ".",
-        "error": "خطأ ، حاول مرة أخرى في وقت لاحق."
+        "error": "حدث خطأ، حاول مرة أخرى لاحقًا."
     }
 }
 
@@ -59,40 +59,4 @@ async function onCall({ message, args, getLang, data }) {
         const input = args[0]?.toLowerCase();
 
         if (!data?.user?.data) return message.reply(getLang("dataNotReady"));
-        const note = data.user.data.note || [];
-
-        let targetMessageID = messageID;
-        if (type == "message_reply") {
-            targetMessageID = messageReply.messageID;
-        }
-
-        if (input == "add") {
-            const isNoted = note.find(item => item.threadID == threadID);
-            if (isNoted)
-                return message
-                    .reply(getLang("alreadyNoted"))
-                    .then(_ => _.addReactEvent({ callback: confirmOverwrite, targetMessageID, note }))
-                    .catch(console.error);
-
-            note.push({ threadID, messageID: targetMessageID });
-            await global.controllers.Users.updateData(message.senderID, { note });
-
-            await message.send(getLang("noted"), threadID, targetMessageID);
-        } else {
-            const isNoted = note.find(item => item.threadID == threadID);
-            if (!isNoted) return message.reply(getLang("notNoted"));
-            const notedMessageID = isNoted.messageID;
-
-            await message.send(getLang("note"), threadID, notedMessageID);
-        }
-    } catch (e) {
-        console.error(e);
-        message.reply(getLang("error"));
-    }
-}
-
-export default {
-    config,
-    langData,
-    onCall
-}
+        const
